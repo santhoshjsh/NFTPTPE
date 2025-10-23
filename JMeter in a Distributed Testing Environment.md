@@ -28,13 +28,12 @@ The test execution is controlled from one **Master (Controller)** node, and mult
 
 ```mermaid
 flowchart LR
-    A[Controller (Master)] --> B1[Load Generator 1 (Slave)]
-    A --> B2[Load Generator 2 (Slave)]
-    A --> B3[Load Generator 3 (Slave)]
-    B1 --> C[Target Application (SUT)]
+    A["Controller (Master)"] --> B1["Load Generator 1 (Slave)"]
+    A --> B2["Load Generator 2 (Slave)"]
+    A --> B3["Load Generator 3 (Slave)"]
+    B1 --> C["Target Application (SUT)"]
     B2 --> C
     B3 --> C
-
 ```
 
 ### 🧠 Key Components:
