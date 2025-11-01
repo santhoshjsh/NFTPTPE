@@ -1,5 +1,5 @@
 
-#Load Generator Sizing Strategy: How to Calculate the Number of LGs Required for 10,000 Virtual Users (with CPU, Memory & Network Formula)
+# Load Generator Sizing Strategy: How to Calculate the Number of LGs Required for 10,000 Virtual Users (with CPU, Memory & Network Formula)
 
 ---
 
