@@ -7,20 +7,7 @@
 
 You can only host as many virtual users (VUs) on one Load Generator (LG) as the **tightest** resource allows:
 
-[
-\textbf{VUs per LG}=\min\Bigg(
-\underbrace{\frac{\text{Usable CPU}}{\text{CPU per VU}}}*{\text{CPU cap}},;
-\underbrace{\frac{\text{Usable RAM}}{\text{RAM per VU}}}*{\text{Memory cap}},;
-\underbrace{\frac{\text{Usable NIC BW}}{\text{BW per VU}}}*{\text{Network cap}},;
-\underbrace{\frac{\text{Usable Disk IOPS}}{\text{IOPS per VU}}}*{\text{Disk cap (rare for HTTP)}}
-\Bigg)
-]
-
-Then:
-
-[
-\textbf{LGs needed}=\left\lceil \frac{\text{Total VUs}}{\text{VUs per LG}} \right\rceil
-]
+<img width="787" height="209" alt="image" src="https://github.com/user-attachments/assets/8d4965bc-7d44-4e6c-af73-c237aedef444" />
 
 Where “usable” means you keep headroom (don’t run LGs at 100%). Typical safe targets:
 
