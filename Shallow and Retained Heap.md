@@ -186,6 +186,7 @@ Retained Heap: 600 MB
 
 ## ✅ **1. Simple Object Graph – Shallow vs Retained Heap**
 
+```mermaid
 graph TD
     ROOT["<GC Root>"] --> MAP["ConcurrentHashMap - Active Sessions"]
     MAP --> S1["HttpSession #1 | Retained = 30MB"]
@@ -197,7 +198,7 @@ graph TD
     S1 --> USER1["User Profile | 3MB"]
     S2 --> USER2["User Profile | 4MB"]
     S3 --> USER3["User Profile | 3.5MB"]
-
+```
 
 
 | Object     | Shallow Heap | Retained Heap          |
