@@ -186,12 +186,11 @@ Retained Heap: 600 MB
 
 ## ✅ **1. Simple Object Graph – Shallow vs Retained Heap**
 
-```mermaid
 graph TD
-    A[Customer Object<br/>Shallow = 32B] --> B[String name<br/>Shallow = 40B]
-    B --> C[char[] data<br/>Shallow = 24B]
+    A["Customer Object | Shallow = 32B"] --> B["String (name) | Shallow = 40B"]
+    B --> C["char[] data | Shallow = 24B"]
 
-```
+
 
 | Object     | Shallow Heap | Retained Heap          |
 | ---------- | ------------ | ---------------------- |
