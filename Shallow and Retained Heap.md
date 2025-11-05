@@ -187,8 +187,16 @@ Retained Heap: 600 MB
 ## ✅ **1. Simple Object Graph – Shallow vs Retained Heap**
 
 graph TD
-    A["Customer Object | Shallow = 32B"] --> B["String (name) | Shallow = 40B"]
-    B --> C["char[] data | Shallow = 24B"]
+    ROOT["<GC Root>"] --> MAP["ConcurrentHashMap - Active Sessions"]
+    MAP --> S1["HttpSession #1 | Retained = 30MB"]
+    MAP --> S2["HttpSession #2 | Retained = 32MB"]
+    MAP --> S3["HttpSession #3 | Retained = 28MB"]
+    S1 --> CART1["Cart Items List | 12MB"]
+    S2 --> CART2["Cart Items List | 13MB"]
+    S3 --> CART3["Cart Items List | 11MB"]
+    S1 --> USER1["User Profile | 3MB"]
+    S2 --> USER2["User Profile | 4MB"]
+    S3 --> USER3["User Profile | 3.5MB"]
 
 
 
